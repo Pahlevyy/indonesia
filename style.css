@@ -1,0 +1,109 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+section {
+        background: transparent;
+      }
+
+.navbar {
+    background-color: transparent !important;
+}   
+
+.hero h1 {
+    font-size: 90px;
+    font-weight: 900;
+    text-align: left;
+}
+
+.hero p.nama {
+    margin-bottom: -20px;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.caption-title {
+  top: 210px;
+  left: 30px;
+  font-weight: bold;
+}
+
+.caption-desc {
+  top: 250px;
+  left: 30px;
+  max-width: 400px; /* supaya teks tidak terlalu lebar, opsional */
+  font-weight: bold;
+}
+
+.gradient-overlay {
+  position: absolute;
+  bottom: 0; /* GANTI top: 0 → bottom: 0 */
+  left: 0;
+  width: 100%;
+  height: 100%; /* Atur seberapa tinggi gradasinya */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 10px;
+}
+
+
+.hero h2 {
+  font-size: 70px;
+  font-weight: 900;
+  text-align: left;
+}
+.kutipan-container {
+  background-color: white;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
+}
+
+.gradient-overlay-kutipan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%; /* atau coba 60% jika mau lebih panjang */
+  background: linear-gradient(to bottom, rgba(139, 83, 0, 0.2), rgba(255, 255, 255, 0));
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 0px;
+}
+
+.kutipan-container blockquote,
+.kutipan-container figcaption {
+  position: relative;
+  z-index: 2;
+}
+
+
+@media  (max-width: 768px){
+  .hero h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 576px) {
+  .hero h1{
+    font-size: 60px;
+  }
+  .caption-desc {
+  font-size: 0.6rem !important;
+}
+body {
+  justify-content: center;
+}
+
+
+}
+
+@media (max-width: 375px) {
+  .hero h1{
+    font-size: 30px;
+  }
+}

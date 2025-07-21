@@ -1,25 +1,43 @@
+/* Font dan reset overflow */
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
+html {
+  overflow-x: hidden;
+}
+
+/* Section transparan */
 section {
-        background: transparent;
-      }
+  background: transparent;
+}
 
+/* Navbar transparan */
 .navbar {
-    background-color: transparent !important;
-}   
+  background-color: transparent !important;
+}
 
+/* Hero section */
 .hero h1 {
-    font-size: 90px;
-    font-weight: 900;
-    text-align: left;
+  font-size: 90px;
+  font-weight: 900;
+  text-align: left;
 }
 
 .hero p.nama {
-    margin-bottom: -20px;
+  margin-bottom: -20px;
 }
 
+.hero h2 {
+  font-size: 70px;
+  font-weight: 900;
+  text-align: left;
+}
+
+/* Carousel dan overlay */
 .carousel-item {
   position: relative;
 }
@@ -28,31 +46,28 @@ section {
   top: 210px;
   left: 30px;
   font-weight: bold;
+  position: absolute;
 }
 
 .caption-desc {
   top: 250px;
   left: 30px;
-  max-width: 400px; /* supaya teks tidak terlalu lebar, opsional */
+  max-width: 400px;
   font-weight: bold;
+  position: absolute;
 }
 
 .gradient-overlay {
   position: absolute;
-  bottom: 0; /* GANTI top: 0 → bottom: 0 */
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Atur seberapa tinggi gradasinya */
+  height: 100%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
   border-radius: 10px;
 }
 
-
-.hero h2 {
-  font-size: 70px;
-  font-weight: 900;
-  text-align: left;
-}
+/* Kutipan */
 .kutipan-container {
   background-color: white;
   max-width: 500px;
@@ -69,11 +84,10 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  height: 40%; /* atau coba 60% jika mau lebih panjang */
+  height: 40%;
   background: linear-gradient(to bottom, rgba(139, 83, 0, 0.2), rgba(255, 255, 255, 0));
   z-index: 0;
   pointer-events: none;
-  border-radius: 0px;
 }
 
 .kutipan-container blockquote,
@@ -82,28 +96,79 @@ section {
   z-index: 2;
 }
 
-
-@media  (max-width: 768px){
+/* Responsive media queries */
+@media (max-width: 992px) {
   .hero h1 {
-    font-size: 50px;
-  }
-}
-@media (max-width: 576px) {
-  .hero h1{
     font-size: 60px;
   }
+
+  .caption-title {
+    font-size: 1.2rem;
+    top: 140px;
+    left: 20px;
+  }
+
   .caption-desc {
-  font-size: 0.6rem !important;
-}
-body {
-  justify-content: center;
+    font-size: 1rem;
+    top: 180px;
+    left: 20px;
+    max-width: 90%;
+  }
 }
 
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 45px;
+  }
 
+  .hero h2 {
+    font-size: 40px;
+  }
+
+  .caption-title {
+    top: 100px;
+    left: 15px;
+    font-size: 1rem;
+  }
+
+  .caption-desc {
+    top: 130px;
+    font-size: 0.85rem;
+    left: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .caption-title {
+    font-size: 0.95rem;
+    top: 90px;
+  }
+
+  .caption-desc {
+    font-size: 0.75rem;
+    top: 120px;
+    max-width: 90%;
+  }
+
+  .kutipan-container {
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 375px) {
-  .hero h1{
+  .hero h1 {
     font-size: 30px;
+  }
+
+  .caption-title {
+    font-size: 0.85rem;
+  }
+
+  .caption-desc {
+    font-size: 0.7rem;
   }
 }
